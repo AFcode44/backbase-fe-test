@@ -1,0 +1,28 @@
+{
+    "makeTransfer": {
+        "header": "Make a transfer",
+        "fromAccount": "FROM ACCOUNT",
+        "fromAccountPlaceholder": "Free Checking(4692) - ${{amount}}",
+        "toAccount": "TO ACCOUNT",
+        "toAccountPlaceholder": "Georgia Power Electric Company",
+        "amount": "AMOUNT",
+        "amountPlaceholder": "0. 00",
+        "submitBtn": "SUBMIT",
+        "errorMsg": "This field is required",
+        "canNotPayMoreThan": "You can not pay more than {{amount}} $",
+        "confirmTransfer": {
+            "areYouSure": "Are sure you want to transfer:",
+            "amount": "Amount:",
+            "to": "To:",
+            "confirmBtn": "Transfer"
+        }
+    },
+    "recentTransactions": {
+        "header": "Recent Transactions",
+        "searchPlaceholder": "Search by typing...",
+        "sortBy": "Sort by",
+        "sortByDate": "DATE",
+        "sortByBeneficiary": "BENEFICIARY",
+        "sortByAmount": "AMOUNT"
+    }
+}

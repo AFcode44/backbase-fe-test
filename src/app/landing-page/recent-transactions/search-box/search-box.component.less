@@ -1,0 +1,36 @@
+@import '../../../shared/styles/colors.less';
+
+.search-container {
+  border-bottom: 1px solid @header-font;
+  margin-left  : 20px;
+
+  button {
+    visibility: hidden;
+  }
+
+  .close-searching {
+    visibility: visible;
+    background: none;
+    border    : none;
+    float     : right;
+    margin-top: 18px;
+
+    .cross:before {
+      margin-left: 4px;
+      content    : url('/assets/icons/cross.svg');
+    }
+  }
+
+  .searchTerm {
+    width      : 88%;
+    border     : none;
+    padding    : 5px;
+    height     : 28px;
+    outline    : none;
+    font-weight: 600;
+
+    &:focus {
+      color: #666666
+    }
+  }
+}

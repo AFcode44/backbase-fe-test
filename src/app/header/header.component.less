@@ -1,0 +1,17 @@
+@import '../shared/styles/devices.less';
+
+.header {
+    width      : 100%;
+    padding    : 12px;
+    margin-left: 60px;
+
+    @media @mobile {
+        max-width: 460px;
+        width    : 100%;
+        margin   : 0 auto;
+
+        img {
+            width: 340px;
+        }
+    }
+}

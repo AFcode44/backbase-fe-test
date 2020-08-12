@@ -1,0 +1,21 @@
+<div class="sort-box-container">
+    <p class="sort-header">{{ 'recentTransactions.sortBy' | translate }}</p>
+    <div class="sort-by">
+        <form>
+            <div class="radio-group">
+                <input type="radio" class="inp-title" id="option-one" [checked]="filterBy === 'title'"
+                    (click)="sortByDate()">
+                <label for="option-one">{{ 'recentTransactions.sortByDate' | translate }}
+                    <i [ngClass]="{'icon-sort-down': dateSortOrder === DateSortingModel.DESCENDING, 'icon-sort-up': dateSortOrder === DateSortingModel.ASCENDING}"
+                        aria-hidden="true"></i>
+                </label>
+                <input type="radio" class="inp-year" id="option-two"
+                    [checked]="otherSortingFilter === OtherSortingOptions.BENEFICIARY" (click)="sortByBeneficiary()">
+                <label for="option-two">{{ 'recentTransactions.sortByBeneficiary' | translate }}</label>
+                <input type="radio" class="inp-meta" id="option-three"
+                    [checked]="otherSortingFilter === OtherSortingOptions.AMOUNT" (click)="sortByAmount()">
+                <label for="option-three">{{ 'recentTransactions.sortByAmount' | translate }}</label>
+            </div>
+        </form>
+    </div>
+</div>

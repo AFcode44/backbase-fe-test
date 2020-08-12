@@ -1,0 +1,94 @@
+@import '../../shared/styles/colors.less';
+@import '../../shared/styles/devices.less';
+
+
+.make-transfer-container {
+    overflow    : auto;
+    margin-left : 90px;
+    margin-right: 30px;
+
+    @media @mobile {
+        margin-left  : 36px;
+        margin-bottom: 20px;
+    }
+
+    .header-section {
+        height    : 38px;
+        background: @header;
+        color     : @header-font;
+
+        p {
+            font-size  : 1.1em;
+            text-align : center;
+            padding-top: 5px;
+            margin     : 0;
+        }
+    }
+
+    .payment-section {
+        height    : 100%;
+        background: @white-background;
+
+        .form-wrapper {
+            margin-right: 10px;
+            padding     : 16px;
+
+            .to-account {
+                border-bottom: 1px solid @header-font;
+                margin-bottom: 8px;
+
+                label {
+                    display    : block;
+                    font-size  : 0.95em;
+                    font-weight: bolder;
+                }
+
+                input {
+                    width      : 100%;
+                    border     : none;
+                    height     : 28px;
+                    outline    : none;
+                    font-weight: 600;
+                    background : none;
+                }
+
+                .currency-left {
+                    position: absolute;
+                    z-index : 100;
+                    margin  : 0;
+                }
+            }
+
+            .error-msg {
+                margin       : 0;
+                font-size    : 0.9em;
+                color        : @error-msg;
+                margin-top   : -6px;
+                margin-bottom: 6px;
+            }
+
+            .button-container {
+                height: 60px;
+
+                .submit-btn {
+                    width        : 120px;
+                    height       : 44px;
+                    float        : right;
+                    border       : none;
+                    background   : @submit-btn;
+                    text-align   : center;
+                    color        : @white-background;
+                    border-radius: 10px;
+                    cursor       : pointer;
+                    margin-top   : 22px;
+                }
+            }
+
+        }
+
+    }
+}
+
+.margin-top {
+    margin-top: 36px;
+}

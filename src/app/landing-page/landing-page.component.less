@@ -1,0 +1,40 @@
+@import '../shared/styles/devices.less';
+
+.landing-page-container {
+    height: calc(100vh - 100px);
+    width : 1280px;
+
+    @media @mobile {
+        max-width: 460px;
+        width    : 100%;
+        margin   : 0 auto;
+    }
+
+    .transactions-wrapper {
+        padding-top: 60px;
+
+
+        .make-transfer {
+            @media @mobile {
+                float: none;
+            }
+
+            @media @desktop {
+                float: left;
+                width: 33%;
+            }
+        }
+
+        .recent-transaction {
+            @media @mobile {
+                float: none;
+            }
+
+            @media @desktop {
+                float: left;
+                width: 67%;
+            }
+
+        }
+    }
+}

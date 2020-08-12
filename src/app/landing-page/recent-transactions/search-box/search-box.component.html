@@ -1,0 +1,8 @@
+<div class="search-container">
+    <input type="text" class="searchTerm" [placeholder]="'recentTransactions.searchPlaceholder' | translate"
+        [(ngModel)]="searchValue" (keyup)="onKeyPress($event)">
+    <button [ngClass]="{'close-searching': searchValue.length > 0}" type="submit" class="searchButton"
+        (click)="resetSearching()">
+        <i class="cross"></i>
+    </button>
+</div>

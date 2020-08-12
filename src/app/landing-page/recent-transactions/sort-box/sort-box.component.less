@@ -1,0 +1,76 @@
+@import '../../../shared/styles/colors.less';
+@import '../../../shared/styles/devices.less';
+
+
+.sort-box-container {
+    margin-left: 10px;
+
+    @media @mobile {
+        height     : 50px;
+        background : @white-background;
+        margin-left: 22px;
+    }
+
+    .sort-header {
+        float      : left;
+        font-weight: 600;
+        font-size  : 0.9em;
+    }
+
+    .sort-by {
+        float: left;
+    }
+
+    @bg         : #10cfff;
+    @txtColor   : #666666;
+    @fg         : lighten(@bg, 20%);
+    @borderWidth: 3px;
+
+    input[type=radio] {
+        position  : absolute;
+        visibility: hidden;
+        display   : none;
+    }
+
+    label {
+        color      : @txtColor;
+        display    : inline-block;
+        cursor     : pointer;
+        font-weight: bold;
+        font-size  : 0.8em;
+
+        @media @mobile {
+            padding: 4px 8px;
+        }
+
+        padding : 4px 20px;
+    }
+
+    input[type=radio]:checked+label {
+        color     : lighten(@bg, 60%);
+        background: @fg;
+    }
+
+    label+input[type=radio]+label {
+        border-left: 1px solid @header-font;
+    }
+
+    .radio-group {
+        border     : 1px solid @header-font;
+        display    : inline-block;
+        overflow   : hidden;
+        margin-top : 12px;
+        margin-left: 19px;
+
+        .icon-sort-down:before {
+            margin-left: 4px;
+            content    : url('/assets/icons/sort-down.svg');
+        }
+
+        .icon-sort-up:before {
+            margin-left: 4px;
+            content    : url('/assets/icons/sort-up.svg');
+        }
+
+    }
+}

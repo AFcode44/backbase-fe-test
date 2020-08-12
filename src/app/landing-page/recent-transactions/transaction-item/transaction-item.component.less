@@ -1,0 +1,85 @@
+@import '../../../shared/styles/colors.less';
+@import '../../../shared/styles/devices.less';
+
+.transaction-container {
+    height      : 40px;
+    margin      : 0 12px;
+    padding     : 5px 10px 16px 10px;
+    border-top  : 2px solid @border-gray;
+    border-right: 2px solid @border-gray;
+
+    .starter {
+        width      : 1%;
+        float      : left;
+        height     : 63px;
+        background : green;
+        margin-left: -10px;
+        margin-top : -7px;
+    }
+
+    .date {
+        @media @mobile {
+            width: 14%;
+        }
+
+        width      :12%;
+        float      : left;
+        margin-left: 12px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        @media @mobile {
+            width: 12%;
+        }
+
+        width      : 10%;
+        float      : left;
+        padding-top: 5px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .merchant {
+        @media @mobile {
+            width: 50%;
+        }
+
+        width: 65%;
+        float: left;
+
+        p {
+            margin: 0;
+        }
+
+        p:first-child {
+            font-weight: bold;
+        }
+
+        p:last-child {
+            font-size: 0.9em;
+        }
+    }
+
+    .amount {
+        @media @mobile {
+            width: 18%;
+        }
+
+        width      : 10%;
+        float      : left;
+        padding-top: 10px;
+
+        p {
+            font-size  : 1.1em;
+            font-weight: bold;
+            margin     : 0;
+        }
+    }
+}
+
+.border-bottom {
+    border-bottom: 2px solid @border-gray ;
+}

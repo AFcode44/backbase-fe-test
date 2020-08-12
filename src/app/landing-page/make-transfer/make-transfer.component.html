@@ -1,0 +1,48 @@
+<div class="make-transfer-container">
+    <div class="header-section">
+        <p>{{ 'makeTransfer.header' | translate }}</p>
+    </div>
+    <div class="payment-section">
+        <form [formGroup]="makeTransferFormGroup">
+            <div class="form-wrapper">
+                <div class="to-account">
+                    <label for="merchant-inp">{{ 'makeTransfer.fromAccount' | translate }}</label>
+                    <input disabled class="from-account-input" id="merchant-inp"
+                        placeholder="{{'makeTransfer.fromAccountPlaceholder' | translate: {amount: (currentOverdraft)} }}">
+                </div>
+
+                <div class="to-account">
+                    <label for="merchant-inp">{{ 'makeTransfer.toAccount' | translate }}</label>
+                    <input id="merchant-inp" placeholder="{{'makeTransfer.toAccountPlaceholder' | translate}}"
+                        formControlName="merchant">
+                </div>
+                <p class="error-msg" *ngIf="formSubmitted && makeTransferFormGroup.get('merchant')?.errors?.required">
+                    {{ 'makeTransfer.errorMsg' | translate}}</p>
+
+
+                <div class="to-account">
+                    <label for="merchant-inp">{{ 'makeTransfer.amount' | translate }}</label>
+                    <input type="number" id="merchant-inp"
+                        placeholder="{{'makeTransfer.amountPlaceholder' | translate}}" formControlName="amount">
+                </div>
+                <p class="error-msg" *ngIf="formSubmitted && makeTransferFormGroup.get('amount')?.errors?.required">
+                    {{ 'makeTransfer.errorMsg' | translate}}</p>
+                <p class="error-msg" *ngIf="formSubmitted && makeTransferFormGroup.get('amount')?.errors?.max">
+                    {{'makeTransfer.canNotPayMoreThan' | translate: {amount: (currentOverdraft - overdraftLimit) } }}
+                </p>
+
+                <div class="button-container">
+                    <button type="submit" class="submit-btn" (click)="addTransaction()">
+                        {{'makeTransfer.submitBtn' | translate}}
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<app-confirm-transfer *ngIf="showConfirmTransfer" (transferingMoneyConfirm)="onMoneyTransfer()"
+    [makeTransferFormGroup]="makeTransferFormGroup">
+
+</app-confirm-transfer>

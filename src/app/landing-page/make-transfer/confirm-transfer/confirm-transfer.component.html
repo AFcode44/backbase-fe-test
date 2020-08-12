@@ -1,0 +1,12 @@
+<div class="confirm-transfer-wrapper">
+    <div class="modal-wrapper">
+        <p>{{'makeTransfer.confirmTransfer.areYouSure' | translate}}</p>
+        <p> {{'makeTransfer.confirmTransfer.amount' | translate}} {{makeTransferFormGroup.get('amount').value }}</p>
+        <p> {{'makeTransfer.confirmTransfer.to' | translate}} {{ makeTransferFormGroup.get('merchant').value }} </p>
+
+        <button class="confirm-btn" (click)="transferMoney()">
+            {{'makeTransfer.confirmTransfer.confirmBtn' | translate}}
+        </button>
+    </div>
+
+</div>

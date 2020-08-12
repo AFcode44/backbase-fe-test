@@ -1,0 +1,39 @@
+@import '../../../shared/styles/colors.less';
+@import '../../../shared/styles/devices.less';
+
+
+.confirm-transfer-wrapper {
+    .modal-wrapper {
+        background: aliceblue;
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+        width     : 400px;
+        height    : 200px;
+
+        @media @mobile {
+            width: 350px;
+        }
+
+        p {
+            margin     : 0;
+            padding    : 10px;
+            font-weight: bolder;
+        }
+    }
+
+    .confirm-btn {
+        width        : 120px;
+        height       : 44px;
+        float        : right;
+        border       : none;
+        background   : @submit-btn;
+        text-align   : center;
+        color        : @white-background;
+        border-radius: 10px;
+        cursor       : pointer;
+        padding      : 10px;
+        margin-right : 20px;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="transaction-container" [ngClass]="{'border-bottom': isLastItem}">
+    <div class="starter">
+    </div>
+    <div class="date">
+        {{ transaction.transactionDate | date:'MMM. d' }}
+    </div>
+    <div class="logo">
+        <img src="{{transaction.merchantLogo}}" alt="Logo" />
+    </div>
+    <div class="merchant">
+        <p>{{ transaction.merchant }}</p>
+        <p>{{ transaction.transactionType }}</p>
+    </div>
+    <div class="amount">
+        <p>-${{ transaction.amount }}</p>
+    </div>
+</div>

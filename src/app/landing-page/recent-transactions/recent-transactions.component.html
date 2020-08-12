@@ -1,0 +1,21 @@
+<div class="recent-transactions-container">
+    <div class="header-section">
+        <p>{{ 'recentTransactions.header' | translate }}</p>
+    </div>
+    <div class="filters-section">
+        <div class="search-section">
+            <app-search-box></app-search-box>
+        </div>
+
+        <div class="sort-section">
+            <app-sort-box [transactions]="recentTransactions"></app-sort-box>
+        </div>
+    </div>
+
+    <div class="history-section">
+        <div *ngFor="let transaction of recentTransactions; let idx = index">
+            <app-transaction-item [transaction]="transaction" [isLastItem]="idx === (recentTransactions.length - 1)">
+            </app-transaction-item>
+        </div>
+    </div>
+</div>

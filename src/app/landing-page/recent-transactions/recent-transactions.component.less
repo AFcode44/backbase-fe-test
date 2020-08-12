@@ -1,0 +1,64 @@
+@import '../../shared/styles/colors.less';
+@import '../../shared/styles/devices.less';
+
+.recent-transactions-container {
+    margin-right: 90px;
+    background  : @white-background;
+    overflow    : auto;
+
+    @media @mobile {
+        margin  : 0;
+        overflow: visible;
+    }
+
+    .header-section {
+        height    : 52px;
+        background: @header;
+        color     : @header-font;
+
+        p {
+            text-align : center;
+            margin     : 0;
+            padding-top: 8px;
+            font-size  : 1.3em;
+        }
+    }
+
+    .filters-section {
+        height    : 50px;
+        margin    : 10px 0;
+        background: @white-background;
+
+        .search-section {
+            @media @mobile {
+                float: none;
+            }
+
+            @media @desktop {
+                width: 50%;
+                float: left;
+            }
+        }
+
+        .sort-section {
+            background: @white-background;
+
+            @media @mobile {
+                float: none;
+            }
+
+            @media @desktop {
+                width: 50%;
+                float: right;
+            }
+        }
+    }
+
+
+    .history-section {
+        background: @white-background;
+        float: left;
+        width: 100%;
+        margin-top: -2px;
+    }
+}
