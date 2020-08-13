@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfirmTransferComponent } from './confirm-transfer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('ConfirmTransferComponent', () => {
   let component: ConfirmTransferComponent;
@@ -8,6 +9,9 @@ describe('ConfirmTransferComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ ConfirmTransferComponent ]
     })
     .compileComponents();

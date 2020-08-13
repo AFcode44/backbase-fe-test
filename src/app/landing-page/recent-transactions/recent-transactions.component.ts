@@ -16,7 +16,6 @@ export class RecentTransactionsComponent implements OnInit {
   ngOnInit() {
     this.transactionsService.recentTransactions.subscribe(
       (transactions: RecentTransactionsModel[]) => {
-        console.error(transactions);
         this.recentTransactions = transactions;
       });
   }

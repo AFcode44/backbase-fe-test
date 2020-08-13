@@ -6,6 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Comments
+
+Application is prepared to work on 2 screens - Desktop and Mobile. 
+All reusable parts of code are located inside Shared folder.
+Except that there is a separate folder for header and landing page.
+Landing page has 2 main features: Make Transfer and Recent Transactions.
+Make Transfer has a seprate folder for confirming transfer.
+Recent Transaction has a separate folders for filtering, sorting and for recent transactions elements.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

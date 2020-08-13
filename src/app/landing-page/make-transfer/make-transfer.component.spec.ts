@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MakeTransferComponent } from './make-transfer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('MakeTransferComponent', () => {
   let component: MakeTransferComponent;
@@ -8,6 +9,9 @@ describe('MakeTransferComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ MakeTransferComponent ]
     })
     .compileComponents();

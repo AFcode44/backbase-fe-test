@@ -9,7 +9,7 @@ import { DateSortingModel } from '../model/sorting-model';
 })
 export class TransactionsService {
 
-  private defaultTransactionsList = new Array<RecentTransactionsModel>();
+  public defaultTransactionsList = new Array<RecentTransactionsModel>();
 
   private filteredTransactionsList = new Array<RecentTransactionsModel>();
 
@@ -36,6 +36,7 @@ export class TransactionsService {
 
   public filterTransactions(filterText: string): void {
     this.filteredTransactionsList = [];
+    console.error(this.defaultTransactionsList);
     this.defaultTransactionsList.forEach((el) => {
       if (el.merchant.includes(filterText) || el.transactionType.includes(filterText)) {
         this.filteredTransactionsList.push(el);
@@ -59,9 +60,8 @@ export class TransactionsService {
     sortedData = dataToSort.sort((a, b) => {
       return b.transactionDate - a.transactionDate;
     });
+
     if (sortOrder === DateSortingModel.ASCENDING) {
-
-
       sortedData = sortedData.reverse();
     }
 
